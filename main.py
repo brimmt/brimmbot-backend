@@ -61,7 +61,7 @@ def chat_with_brimmbot(message: Message):
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": message.user_input}
         ],
-        max_tokens=150  # 🔹 Add this to control reply length
+        max_tokens=100  # 🔹 Add this to control reply length
     )
 
     return {"reply": response.choices[0].message.content}
